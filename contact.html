@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | YUVASENA YOUTH THIGUL</title>
+<meta name="description" content="Get in touch with YUVASENA YOUTH, Thigul. Find our location, phone, email and social media, or send us a message.">
+<meta property="og:title" content="Contact Us | YUVASENA YOUTH THIGUL">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFDF8; --cream:#F8F1E5; --orange:#F36B21; --maroon:#7A1F1F; --gold:#D89B32;
+    --text:#222222; --text-soft:#6b625c; --line:rgba(122,31,31,0.10);
+    --shadow:0 10px 30px rgba(122,31,31,0.07); --radius:14px; --max:1160px;
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--text); font-family:'Karla',sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Fraunces',serif; margin:0; color:var(--maroon); font-weight:600; letter-spacing:-0.01em; }
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  .container{ max-width:var(--max); margin:0 auto; padding:0 24px; }
+  section{ padding:0 0 80px; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{ outline:2px solid var(--orange); outline-offset:3px; }
+
+  header.site-header{ position:sticky; top:0; z-index:50; background:rgba(255,253,248,0.92); backdrop-filter:saturate(150%) blur(6px); border-bottom:1px solid var(--line); transition:box-shadow .2s ease; }
+  header.site-header.scrolled{ box-shadow:0 2px 18px rgba(122,31,31,0.06); }
+  .nav-row{ max-width:var(--max); margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand-mark{ width:42px; height:42px; flex-shrink:0; }
+  .brand-text{ display:flex; flex-direction:column; line-height:1.15; }
+  .brand-text strong{ font-family:'Fraunces',serif; font-size:16px; color:var(--maroon); letter-spacing:0.02em; }
+  .brand-text span{ font-size:11px; letter-spacing:0.14em; color:var(--gold); font-weight:700; }
+  nav.primary-nav{ display:flex; align-items:center; gap:30px; }
+  nav.primary-nav a{ font-size:13px; font-weight:700; letter-spacing:0.08em; color:var(--text); padding:6px 2px; position:relative; }
+  nav.primary-nav a::after{ content:""; position:absolute; left:0; right:0; bottom:-4px; height:2px; background:var(--orange); transform:scaleX(0); transform-origin:left; transition:transform .18s ease; }
+  nav.primary-nav a:hover::after, nav.primary-nav a[aria-current="page"]::after{ transform:scaleX(1); }
+  nav.primary-nav a.btn-login{ border:1.5px solid var(--maroon); border-radius:8px; padding:9px 18px; }
+  nav.primary-nav a.btn-login::after{ display:none; }
+  nav.primary-nav a.btn-login:hover{ background:var(--maroon); color:#fff; }
+  .hamburger{ display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; }
+  .hamburger span{ width:24px; height:2px; background:var(--maroon); display:block; border-radius:2px; }
+  .mobile-panel{ display:none; flex-direction:column; padding:8px 24px 22px; border-top:1px solid var(--line); background:var(--bg); }
+  .mobile-panel.open{ display:flex; }
+  .mobile-panel a{ padding:13px 0; font-size:14px; font-weight:700; letter-spacing:0.06em; border-bottom:1px solid var(--line); }
+  .mobile-panel a:last-child{ border-bottom:none; }
+  @media (max-width:880px){ nav.primary-nav{ display:none; } .hamburger{ display:flex; } }
+
+  .page-head{ text-align:center; padding:56px 0 46px; }
+  .page-head .rule{ width:56px; height:3px; background:var(--gold); border-radius:2px; margin:0 auto 18px; }
+  .page-head h1{ font-size:clamp(30px,4.4vw,44px); }
+  .page-head p{ color:var(--text-soft); margin-top:10px; max-width:52ch; margin-left:auto; margin-right:auto; }
+
+  .contact-grid{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:48px; align-items:start; }
+  @media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+
+  .info-card{
+    background:var(--cream); border-radius:var(--radius); padding:30px; margin-bottom:20px;
+  }
+  .info-row{ display:flex; gap:16px; align-items:flex-start; padding:16px 0; border-bottom:1px solid rgba(122,31,31,0.08); }
+  .info-row:last-child{ border-bottom:none; }
+  .info-row .icon-wrap{
+    width:38px; height:38px; border-radius:50%; background:var(--bg); color:var(--maroon);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; border:1px solid var(--gold);
+  }
+  .info-row h3{ font-size:13px; letter-spacing:0.06em; color:var(--maroon); font-family:'Karla',sans-serif; font-weight:700; }
+  .info-row p{ margin:4px 0 0; font-size:14px; color:var(--text-soft); }
+  .info-row .social-links{ display:flex; gap:10px; margin-top:6px; }
+  .info-row .social-links a{
+    width:32px; height:32px; border-radius:50%; border:1px solid var(--line); display:flex;
+    align-items:center; justify-content:center; color:var(--maroon);
+  }
+  .info-row .social-links a:hover{ background:var(--maroon); color:#fff; border-color:var(--maroon); }
+
+  .map-wrap{ border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); }
+  .map-wrap iframe{ width:100%; height:280px; border:0; display:block; }
+
+  .form-card{
+    background:var(--bg); border:1px solid var(--line); border-radius:var(--radius);
+    padding:34px; box-shadow:var(--shadow);
+  }
+  .field{ margin-bottom:20px; }
+  .field label{ display:block; font-size:12.5px; font-weight:700; letter-spacing:0.04em; color:var(--maroon); margin-bottom:7px; }
+  .field input, .field textarea{
+    width:100%; padding:13px 14px; border:1.5px solid var(--line); border-radius:9px;
+    font-family:'Karla',sans-serif; font-size:14.5px; color:var(--text); background:#fff;
+    transition:border-color .15s ease;
+  }
+  .field input:focus, .field textarea:focus{ border-color:var(--gold); outline:none; }
+  .field textarea{ min-height:120px; resize:vertical; }
+  .field .error-msg{ color:var(--orange); font-size:12px; margin-top:6px; display:none; }
+  .field.invalid input, .field.invalid textarea{ border-color:var(--orange); }
+  .field.invalid .error-msg{ display:block; }
+
+  /* honeypot spam trap, hidden from real users */
+  .hp-field{ position:absolute; left:-9999px; opacity:0; height:0; overflow:hidden; }
+
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; font-weight:700; font-size:13px; letter-spacing:0.06em; padding:14px 30px; border-radius:9px; cursor:pointer; border:1.5px solid transparent; transition:transform .15s ease, background .15s ease; width:100%; }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--orange); color:#fff; }
+  .btn-primary:hover{ background:#da5b16; }
+
+  .success-msg{
+    display:none; align-items:center; gap:10px; background:#f2ede0; border:1px solid var(--gold);
+    color:var(--maroon); padding:14px 16px; border-radius:10px; font-size:13.5px; margin-bottom:20px;
+  }
+  .success-msg.show{ display:flex; }
+
+  footer{ background:var(--maroon); color:#f6e9df; padding:52px 0 26px; }
+  .footer-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; align-items:flex-start; }
+  .footer-brand{ display:flex; gap:12px; align-items:center; }
+  .footer-brand .brand-text strong{ color:#fff; }
+  .footer-brand .brand-text span{ color:var(--gold); }
+  footer .tagline{ font-size:13px; color:#e8cdbb; margin-top:10px; font-style:italic; }
+  .social-row{ display:flex; gap:12px; }
+  .social-row a{ width:36px; height:36px; border-radius:50%; border:1px solid rgba(255,255,255,0.25); display:flex; align-items:center; justify-content:center; color:#f6e9df; }
+  .social-row a:hover{ background:rgba(255,255,255,0.12); }
+  .copyright{ text-align:center; margin-top:38px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.15); font-size:12.5px; color:#e8cdbb; }
+</style>
+</head>
+<body>
+
+<!--
+  DEVELOPER NOTE:
+  This form validates client-side and shows a success message, but does
+  not send anywhere yet (no backend attached, per current scope). Wire
+  the fetch() call marked below to a real endpoint (e.g. a Supabase
+  table insert, a serverless function, or a service like Formspree)
+  when ready. A hidden honeypot field is included for basic spam
+  mitigation; pair it with server-side validation once a backend exists.
+-->
+
+<header class="site-header" id="siteHeader">
+  <div class="nav-row">
+    <a href="index.html" class="brand" aria-label="YUVASENA YOUTH THIGUL home">
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo placeholder">
+        <circle cx="24" cy="24" r="23" fill="#F8F1E5" stroke="#D89B32" stroke-width="1.5"/>
+        <path d="M24 14c-3.5 0-6 2.6-6 6.2 0 2.4 1.3 3.9 1.3 3.9s-3.6.4-3.6 4.6c0 3.1 2.6 4.3 4.6 4.3 1.5 0 2.4-.6 2.4-.6" stroke="#7A1F1F" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        <circle cx="24" cy="19.5" r="2.1" fill="#F36B21"/>
+      </svg>
+      <span class="brand-text"><strong>YUVASENA YOUTH</strong><span>THIGUL</span></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="index.html">HOME</a>
+      <a href="team.html">TEAM</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="contact.html" aria-current="page">CONTACT US</a>
+      <a href="login.html" class="btn-login">MEMBER LOGIN</a>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="index.html">HOME</a>
+    <a href="team.html">TEAM</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="contact.html">CONTACT US</a>
+    <a href="login.html">MEMBER LOGIN</a>
+  </div>
+</header>
+
+<main>
+  <div class="page-head">
+    <div class="rule"></div>
+    <h1>CONTACT US</h1>
+    <p>Questions about membership, events or sponsorships? We'd love to hear from you.</p>
+  </div>
+
+  <section>
+    <div class="container contact-grid">
+      <div>
+        <div class="info-card">
+          <div class="info-row">
+            <div class="icon-wrap"><i data-lucide="map-pin" aria-hidden="true"></i></div>
+            <div><h3>LOCATION</h3><p>Thigul, Telangana, India</p></div>
+          </div>
+          <div class="info-row">
+            <div class="icon-wrap"><i data-lucide="phone" aria-hidden="true"></i></div>
+            <div><h3>PHONE</h3><p>+91 00000 00000 <em style="font-style:normal;color:var(--gold);">(placeholder)</em></p></div>
+          </div>
+          <div class="info-row">
+            <div class="icon-wrap"><i data-lucide="mail" aria-hidden="true"></i></div>
+            <div><h3>EMAIL</h3><p>info@yuvasenathigul.example <em style="font-style:normal;color:var(--gold);">(placeholder)</em></p></div>
+          </div>
+          <div class="info-row">
+            <div class="icon-wrap"><i data-lucide="share-2" aria-hidden="true"></i></div>
+            <div>
+              <h3>SOCIAL MEDIA</h3>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-9h3l1-4h-4V6.5c0-1.1.4-2 2-2h2V1.1C16.6 1 15.4 1 14 1c-3 0-5 1.8-5 5.2V9H6v4h3v9h4z"/></svg></a>
+                <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+                <a href="#" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l6 3-6 3z"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps?q=Thigul,Telangana,India&output=embed" loading="lazy" title="Map showing Thigul, Telangana, India" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="success-msg" id="successMsg">
+          <i data-lucide="check-circle-2" aria-hidden="true"></i>
+          <span>Thank you — your message has been received. We'll get back to you soon.</span>
+        </div>
+        <form id="contactForm" novalidate>
+          <div class="field" data-field="name">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <div class="error-msg">Please enter your name.</div>
+          </div>
+          <div class="field" data-field="phone">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required pattern="[0-9+\-\s]{7,15}">
+            <div class="error-msg">Please enter a valid phone number.</div>
+          </div>
+          <div class="field" data-field="email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <div class="error-msg">Please enter a valid email address.</div>
+          </div>
+          <div class="field" data-field="message">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <div class="error-msg">Please enter a message.</div>
+          </div>
+          <!-- Honeypot: real visitors never fill this in -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="23" fill="none" stroke="#D89B32" stroke-width="1.5"/>
+            <path d="M24 14c-3.5 0-6 2.6-6 6.2 0 2.4 1.3 3.9 1.3 3.9s-3.6.4-3.6 4.6c0 3.1 2.6 4.3 4.6 4.3 1.5 0 2.4-.6 2.4-.6" stroke="#F8F1E5" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+            <circle cx="24" cy="19.5" r="2.1" fill="#F36B21"/>
+          </svg>
+          <span class="brand-text"><strong>YUVASENA YOUTH</strong><span>THIGUL</span></span>
+        </div>
+        <p class="tagline">"Our Tradition. Our Unity. Our Festival."</p>
+      </div>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-9h3l1-4h-4V6.5c0-1.1.4-2 2-2h2V1.1C16.6 1 15.4 1 14 1c-3 0-5 1.8-5 5.2V9H6v4h3v9h4z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l6 3-6 3z"/></svg></a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 YUVASENA YOUTH – THIGUL</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script>
+  if (window.lucide) lucide.createIcons();
+
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 8));
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobilePanel = document.getElementById('mobilePanel');
+  hamburgerBtn.addEventListener('click', () => {
+    const isOpen = mobilePanel.classList.toggle('open');
+    hamburgerBtn.setAttribute('aria-expanded', isOpen);
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobilePanel.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Contact form validation
+  const form = document.getElementById('contactForm');
+  const successMsg = document.getElementById('successMsg');
+
+  function validateField(field){
+    const input = field.querySelector('input, textarea');
+    let valid = input.checkValidity();
+    field.classList.toggle('invalid', !valid);
+    return valid;
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Honeypot check — if filled, silently drop (likely a bot)
+    const honeypot = form.querySelector('#website').value;
+    if (honeypot) { return; }
+
+    const fields = form.querySelectorAll('.field');
+    let allValid = true;
+    fields.forEach(field => { if (!validateField(field)) allValid = false; });
+
+    if (!allValid) return;
+
+    // DEVELOPER NOTE: replace this block with a real submission, e.g.:
+    // await fetch('/api/contact', { method:'POST', body: new FormData(form) });
+    successMsg.classList.add('show');
+    form.reset();
+    fields.forEach(f => f.classList.remove('invalid'));
+    successMsg.scrollIntoView({ behavior:'smooth', block:'center' });
+  });
+</script>
+</body>
+</html>

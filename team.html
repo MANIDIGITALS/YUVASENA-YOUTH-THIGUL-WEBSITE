@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team | YUVASENA YOUTH THIGUL</title>
+<meta name="description" content="Meet the executive committee and core members of YUVASENA YOUTH, Thigul.">
+<meta property="og:title" content="Our Team | YUVASENA YOUTH THIGUL">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFDF8; --cream:#F8F1E5; --orange:#F36B21; --maroon:#7A1F1F; --gold:#D89B32;
+    --text:#222222; --text-soft:#6b625c; --line:rgba(122,31,31,0.10);
+    --shadow:0 10px 30px rgba(122,31,31,0.07); --radius:14px; --max:1160px;
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--bg); color:var(--text); font-family:'Karla',sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Fraunces',serif; margin:0; color:var(--maroon); font-weight:600; letter-spacing:-0.01em; }
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  .container{ max-width:var(--max); margin:0 auto; padding:0 24px; }
+  section{ padding:64px 0; }
+  @media (max-width:720px){ section{ padding:44px 0; } }
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--orange); outline-offset:3px; }
+
+  header.site-header{ position:sticky; top:0; z-index:50; background:rgba(255,253,248,0.92); backdrop-filter:saturate(150%) blur(6px); border-bottom:1px solid var(--line); transition:box-shadow .2s ease; }
+  header.site-header.scrolled{ box-shadow:0 2px 18px rgba(122,31,31,0.06); }
+  .nav-row{ max-width:var(--max); margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand-mark{ width:42px; height:42px; flex-shrink:0; }
+  .brand-text{ display:flex; flex-direction:column; line-height:1.15; }
+  .brand-text strong{ font-family:'Fraunces',serif; font-size:16px; color:var(--maroon); letter-spacing:0.02em; }
+  .brand-text span{ font-size:11px; letter-spacing:0.14em; color:var(--gold); font-weight:700; }
+  nav.primary-nav{ display:flex; align-items:center; gap:30px; }
+  nav.primary-nav a{ font-size:13px; font-weight:700; letter-spacing:0.08em; color:var(--text); padding:6px 2px; position:relative; }
+  nav.primary-nav a::after{ content:""; position:absolute; left:0; right:0; bottom:-4px; height:2px; background:var(--orange); transform:scaleX(0); transform-origin:left; transition:transform .18s ease; }
+  nav.primary-nav a:hover::after, nav.primary-nav a[aria-current="page"]::after{ transform:scaleX(1); }
+  nav.primary-nav a.btn-login{ border:1.5px solid var(--maroon); border-radius:8px; padding:9px 18px; }
+  nav.primary-nav a.btn-login::after{ display:none; }
+  nav.primary-nav a.btn-login:hover{ background:var(--maroon); color:#fff; }
+  .hamburger{ display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; }
+  .hamburger span{ width:24px; height:2px; background:var(--maroon); display:block; border-radius:2px; }
+  .mobile-panel{ display:none; flex-direction:column; padding:8px 24px 22px; border-top:1px solid var(--line); background:var(--bg); }
+  .mobile-panel.open{ display:flex; }
+  .mobile-panel a{ padding:13px 0; font-size:14px; font-weight:700; letter-spacing:0.06em; border-bottom:1px solid var(--line); }
+  .mobile-panel a:last-child{ border-bottom:none; }
+  @media (max-width:880px){ nav.primary-nav{ display:none; } .hamburger{ display:flex; } }
+
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; font-weight:700; font-size:13px; letter-spacing:0.06em; padding:14px 28px; border-radius:9px; cursor:pointer; border:1.5px solid transparent; transition:transform .15s ease, background .15s ease, color .15s ease; }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-outline{ border-color:var(--maroon); color:var(--maroon); background:transparent; }
+  .btn-outline:hover{ background:var(--maroon); color:#fff; }
+
+  .page-head{ text-align:center; padding:56px 0 8px; }
+  .page-head .rule{ width:56px; height:3px; background:var(--gold); border-radius:2px; margin:0 auto 18px; }
+  .page-head h1{ font-size:clamp(30px,4.4vw,44px); }
+  .page-head p{ color:var(--text-soft); margin-top:10px; max-width:52ch; margin-left:auto; margin-right:auto; }
+
+  .section-label{ text-align:center; margin-bottom:40px; }
+  .section-label h2{ font-size:22px; letter-spacing:0.04em; }
+
+  .exec-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+  @media (max-width:900px){ .exec-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .exec-grid{ grid-template-columns:1fr; } }
+
+  .core-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  @media (max-width:900px){ .core-grid{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:620px){ .core-grid{ grid-template-columns:repeat(2,1fr); } }
+
+  .member-card{
+    background:var(--bg); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 18px; text-align:center; box-shadow:var(--shadow);
+  }
+  .member-card.exec{ border-top:3px solid var(--orange); }
+  .avatar{
+    width:88px; height:88px; border-radius:50%; margin:0 auto 16px; background:var(--cream);
+    display:flex; align-items:center; justify-content:center; color:var(--gold);
+    border:1.5px solid var(--gold);
+  }
+  .avatar svg{ width:42%; height:42%; }
+  .core-grid .avatar{ width:70px; height:70px; }
+  .member-card h3{ font-size:15px; color:var(--text); font-family:'Karla',sans-serif; font-weight:700; }
+  .member-card .role{ font-size:12px; letter-spacing:0.08em; color:var(--maroon); font-weight:700; margin-top:6px; }
+
+  .divider-space{ height:1px; background:var(--line); margin:56px auto; max-width:var(--max); }
+
+  footer{ background:var(--maroon); color:#f6e9df; padding:52px 0 26px; }
+  .footer-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; align-items:flex-start; }
+  .footer-brand{ display:flex; gap:12px; align-items:center; }
+  .footer-brand .brand-text strong{ color:#fff; }
+  .footer-brand .brand-text span{ color:var(--gold); }
+  footer .tagline{ font-size:13px; color:#e8cdbb; margin-top:10px; font-style:italic; }
+  .social-row{ display:flex; gap:12px; }
+  .social-row a{ width:36px; height:36px; border-radius:50%; border:1px solid rgba(255,255,255,0.25); display:flex; align-items:center; justify-content:center; color:#f6e9df; }
+  .social-row a:hover{ background:rgba(255,255,255,0.12); }
+  .copyright{ text-align:center; margin-top:38px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.15); font-size:12.5px; color:#e8cdbb; }
+</style>
+</head>
+<body>
+
+<!-- DEVELOPER NOTE: Replace avatar placeholders with real member photos and names once provided. -->
+
+<header class="site-header" id="siteHeader">
+  <div class="nav-row">
+    <a href="index.html" class="brand" aria-label="YUVASENA YOUTH THIGUL home">
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo placeholder">
+        <circle cx="24" cy="24" r="23" fill="#F8F1E5" stroke="#D89B32" stroke-width="1.5"/>
+        <path d="M24 14c-3.5 0-6 2.6-6 6.2 0 2.4 1.3 3.9 1.3 3.9s-3.6.4-3.6 4.6c0 3.1 2.6 4.3 4.6 4.3 1.5 0 2.4-.6 2.4-.6" stroke="#7A1F1F" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        <circle cx="24" cy="19.5" r="2.1" fill="#F36B21"/>
+      </svg>
+      <span class="brand-text"><strong>YUVASENA YOUTH</strong><span>THIGUL</span></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="index.html">HOME</a>
+      <a href="team.html" aria-current="page">TEAM</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="contact.html">CONTACT US</a>
+      <a href="login.html" class="btn-login">MEMBER LOGIN</a>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="index.html">HOME</a>
+    <a href="team.html">TEAM</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="contact.html">CONTACT US</a>
+    <a href="login.html">MEMBER LOGIN</a>
+  </div>
+</header>
+
+<main>
+  <div class="page-head">
+    <div class="rule"></div>
+    <h1>OUR TEAM</h1>
+    <p>The people who plan, organise and carry forward our community's traditions every year.</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-label"><h2>EXECUTIVE COMMITTEE</h2></div>
+      <div class="exec-grid">
+        <div class="member-card exec">
+          <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div>
+          <h3>President Name</h3>
+          <div class="role">PRESIDENT</div>
+        </div>
+        <div class="member-card exec">
+          <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div>
+          <h3>Vice President Name</h3>
+          <div class="role">VICE PRESIDENT</div>
+        </div>
+        <div class="member-card exec">
+          <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div>
+          <h3>Secretary Name</h3>
+          <div class="role">SECRETARY</div>
+        </div>
+        <div class="member-card exec">
+          <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div>
+          <h3>Treasurer Name</h3>
+          <div class="role">TREASURER</div>
+        </div>
+      </div>
+
+      <div class="divider-space"></div>
+
+      <div class="section-label"><h2>CORE MEMBERS</h2></div>
+      <div class="core-grid">
+        <div class="member-card"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div><h3>Member Name</h3><div class="role">CORE MEMBER</div></div>
+        <div class="member-card"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div><h3>Member Name</h3><div class="role">CORE MEMBER</div></div>
+        <div class="member-card"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div><h3>Member Name</h3><div class="role">CORE MEMBER</div></div>
+        <div class="member-card"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div><h3>Member Name</h3><div class="role">CORE MEMBER</div></div>
+        <div class="member-card"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div><h3>Member Name</h3><div class="role">CORE MEMBER</div></div>
+        <div class="member-card"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div><h3>Member Name</h3><div class="role">CORE MEMBER</div></div>
+        <div class="member-card"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div><h3>Member Name</h3><div class="role">CORE MEMBER</div></div>
+        <div class="member-card"><div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3.5-6.5 7-6.5S19 16 19 20"/></svg></div><h3>Member Name</h3><div class="role">CORE MEMBER</div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="23" fill="none" stroke="#D89B32" stroke-width="1.5"/>
+            <path d="M24 14c-3.5 0-6 2.6-6 6.2 0 2.4 1.3 3.9 1.3 3.9s-3.6.4-3.6 4.6c0 3.1 2.6 4.3 4.6 4.3 1.5 0 2.4-.6 2.4-.6" stroke="#F8F1E5" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+            <circle cx="24" cy="19.5" r="2.1" fill="#F36B21"/>
+          </svg>
+          <span class="brand-text"><strong>YUVASENA YOUTH</strong><span>THIGUL</span></span>
+        </div>
+        <p class="tagline">"Our Tradition. Our Unity. Our Festival."</p>
+      </div>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-9h3l1-4h-4V6.5c0-1.1.4-2 2-2h2V1.1C16.6 1 15.4 1 14 1c-3 0-5 1.8-5 5.2V9H6v4h3v9h4z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l6 3-6 3z"/></svg></a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 YUVASENA YOUTH – THIGUL</p>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 8));
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobilePanel = document.getElementById('mobilePanel');
+  hamburgerBtn.addEventListener('click', () => {
+    const isOpen = mobilePanel.classList.toggle('open');
+    hamburgerBtn.setAttribute('aria-expanded', isOpen);
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobilePanel.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+</body>
+</html>
